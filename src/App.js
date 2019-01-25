@@ -38,12 +38,18 @@ class App extends Component {
   render() {
 
     return (
-      <div className="App">
-        <h1>
+      <div className="App" id='home'>
+      <div className='left-column'>LEFT</div>
+        <div className='middle-column'>
+        <h2 class="green inverted ui center aligned icon block header">
+        <i class="tree icon"></i>
           Parks For All
-        </h1>
+        </h2>
         <SearchBar performSearch={this.performSearch}/>
         <ResultsContainer parksData={this.state.parksToRender}/>
+        </div>
+        <div className='right-column'>RIGHT</div>
+
       </div>
     );
   }

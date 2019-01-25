@@ -1,3 +1,47 @@
 .App {
   text-align: center;
 }
+
+#root{
+  background-image: url("https://images.unsplash.com/photo-1529806414965-afc2044ad821?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#home{
+  display: flex;
+  flex-direction: row;
+}
+
+.middle-column{
+  width: 33vw;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 75px;
+
+
+}
+
+.results{
+  margin-top: 50px;
+
+  overflow-y:scroll;
+
+}
+
+.left-column{
+  display: flex;
+    flex-direction: column;
+  width: 33vw;
+
+}
+
+.right-column{
+  display: flex;
+    flex-direction: column;
+      width: 33vw;
+
+}

@@ -16,7 +16,9 @@ class ResultsContainer extends Component{
 
   render(){
     return(
-      <div>
+
+      <div className='results'>
+    
       {this.generateResultCards()}
       </div>
     )
