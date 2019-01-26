@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchBar from './Components/SearchBar'
+import NameSearchBar from './Components/NameSearchBar'
+import TypeSearchBar from './Components/TypeSearchBar'
 import ResultsContainer from './Components/ResultsContainer'
 // import MapContainer from './Components/MapContainer'
 
@@ -19,17 +20,28 @@ class App extends Component {
     return fetch(`https://data.cityofnewyork.us/resource/4xyq-5bdm.json`)
     .then(res=>res.json())
     .then(data=> this.setState({
-      parksData: data
+      parksData: data,
+      parksToRender: data
     }))
   }
 
-  performSearch=(e, query)=>{
+  performNameSearch=(e, query)=>{
     e.preventDefault()
-    console.log("parks", this.state.parksData)
     let foundParks = []
     if (this.state.parksData.length > 0){
       foundParks = this.state.parksData.filter((parkObj)=>{
         return parkObj.name.toLowerCase().includes(query)
+      })
+    }
+    this.setState({parksToRender: foundParks})
+  }
+
+  performTypeSearch=(e, query)=>{
+    e.preventDefault()
+    let foundParks = []
+    if (this.state.parksData.length > 0){
+      foundParks = this.state.parksData.filter((parkObj)=>{
+        return parkObj.type === query
       })
     }
     this.setState({parksToRender: foundParks})
@@ -45,7 +57,8 @@ class App extends Component {
         <i class="tree icon"></i>
           Parks For All
         </h2>
-        <SearchBar performSearch={this.performSearch}/>
+        <NameSearchBar performNameSearch={this.performNameSearch}/>
+        <TypeSearchBar performTypeSearch={this.performTypeSearch}/>
         <ResultsContainer parksData={this.state.parksToRender}/>
         </div>
         <div className='right-column'>RIGHT</div>

@@ -18,7 +18,6 @@ class ResultsContainer extends Component{
     return(
 
       <div className='results'>
-    
       {this.generateResultCards()}
       </div>
     )
