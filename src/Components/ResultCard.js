@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class ResultCard extends Component{
-  render(){
-    const name = this.props.parkObj.name
-    const location = this.props.parkObj.location
-    const parkType = this.props.parkObj.type
+const ResultCard = (props)=>{
+    const name = props.parkObj.name
+    const location = props.parkObj.location
+    const parkType = props.parkObj.type
     return(
       <div className= 'yellow ui segment'>
       <h4>{name}</h4>
@@ -13,7 +12,7 @@ class ResultCard extends Component{
       </div>
     )
   }
-}
+
 
 
 export default ResultCard

@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ResultCard from './ResultCard';
 
 
-class ResultsContainer extends Component{
+const ResultsContainer = (props)=>{
 
-  generateResultCards(){
-    if (this.props.parksData.length > 0){
-      return this.props.parksData.map((parkObj) =>{
+  const generateResultCards=()=>{
+    if (props.parksData.length > 0){
+      return props.parksData.map((parkObj) =>{
         return (<ResultCard parkObj={parkObj}/>)
       })
     }else{
@@ -14,14 +14,12 @@ class ResultsContainer extends Component{
     }
   }
 
-  render(){
     return(
-
       <div className='results'>
-      {this.generateResultCards()}
+      {generateResultCards()}
       </div>
     )
-  }
+
 }
 
 export default ResultsContainer
