@@ -36,4 +36,4 @@ In the works:
 
 ## Contact
 
-Ruby Reilly – [my github](https://github.com/rubyreilly) – [rubyreilly.com](rubyreilly.com) - [rubyclaroreilly@gmail.com](mailto:rubyclaroreilly@gmail.com)
+Ruby Reilly – [my github](https://github.com/rubyreilly) – [rubyreilly.com](https://rubyreilly.github.io/) - [rubyclaroreilly@gmail.com](mailto:rubyclaroreilly@gmail.com)
